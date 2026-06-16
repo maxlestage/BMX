@@ -12,7 +12,7 @@ from PIL import Image
 
 BG = (23, 25, 28)  # #17191c — fond du site / theme_color
 ROOT = os.path.join(os.path.dirname(__file__), "..")
-LOGO = os.path.join(ROOT, "src", "assets", "logo-bmx.png")
+LOGO = os.path.join(ROOT, "src", "assets", "logo-bmx-mark.png")
 OUT = os.path.join(ROOT, "public")
 
 
