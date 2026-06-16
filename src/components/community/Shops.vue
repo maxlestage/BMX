@@ -12,7 +12,7 @@ import { api, ApiError, mediaUrl, type Shop } from '../../api'
 import { useAuth } from '../../auth'
 import { useI18n } from '../../i18n'
 
-const SHOP_COLOR = '#c4d8ee'
+const SHOP_COLOR = '#bcccdb'
 const WORLD: L.LatLngTuple = [25, 5]
 const LIST_MAX = 80
 
