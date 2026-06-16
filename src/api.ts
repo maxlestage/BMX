@@ -14,7 +14,8 @@ function defaultBase(): string {
   if (typeof window !== 'undefined') {
     const h = window.location.hostname
     if (h && h !== 'localhost' && h !== '127.0.0.1') {
-      return 'https://bmx-project-dc34db4d452d.herokuapp.com/api/v1'
+      // Même origine : le backend Rust sert aussi le front (une seule app).
+      return `${window.location.origin}/api/v1`
     }
   }
   return 'http://localhost:8080/api/v1'
