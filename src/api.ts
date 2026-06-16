@@ -1,11 +1,10 @@
 // Client API bmx — typé, avec gestion du token JWT.
 //
-// L'URL de base est injectée au build (define Bun) via BMX_API_URL.
+// L'URL de base est injectée au build (Vite) via VITE_BMX_API_URL.
 // En dev/local on retombe sur le backend Rust local. Les lectures (parts,
 // spots, sondages) sont publiques ; les écritures exigent un Bearer token.
 
-const RAW_BASE =
-  (typeof process !== 'undefined' && process.env && process.env.BMX_API_URL) || ''
+const RAW_BASE = (import.meta.env.VITE_BMX_API_URL as string | undefined) || ''
 
 // URL d'API par défaut selon le contexte :
 //   - en prod (site servi sur un vrai domaine) → API Heroku
