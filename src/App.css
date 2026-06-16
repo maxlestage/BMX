@@ -611,7 +611,7 @@ main {
   height: 64px;
   border-radius: 50%;
   padding: 3px;
-  background: linear-gradient(135deg, var(--accent), #cdb482 60%, #fff);
+  background: linear-gradient(135deg, var(--accent), #3f72a8 60%, #fff);
   box-shadow: 0 0 12px rgba(230, 211, 167, 0.4);
   display: flex;
 }
