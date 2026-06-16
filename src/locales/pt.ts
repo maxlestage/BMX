@@ -15,7 +15,7 @@ export const pt: Record<string, string> = {
   'hero.title.l2a': 'é ',
   'hero.title.accent': 'para sempre',
   'hero.lede':
-    'Quatro rodas, um shape e o asfalto a passar. Uma carta de amor à liberdade mais simples do mundo — a de rolar.',
+    'Duas rodas, um guiador e o asfalto a passar. Uma carta de amor à liberdade mais simples do mundo — a de rolar.',
   'hero.cta.manifesto': 'Ler o manifesto',
   'hero.cta.join': 'Juntar-se ao crew',
   'hero.scroll': 'scroll',
@@ -24,18 +24,18 @@ export const pt: Record<string, string> = {
 
   'manifesto.kicker': 'O manifesto',
   'manifesto.text':
-    'Apaixonámo-nos por um pedaço de madeira e quatro rodas. Desde então, cada passeio é uma promessa, cada rampa uma pergunta, cada queda um motivo para recomeçar.',
+    'Apaixonámo-nos por um quadro de aço e duas rodas. Desde então, cada passeio é uma promessa, cada rampa uma pergunta, cada queda um motivo para voltar a subir.',
   'manifesto.sign':
-    'O bmx não pede nada. Sem pontuação, sem adversário. Só tu, o teu shape e a vontade de empurrar mais uma vez.',
+    'O bmx não pede nada. Sem pontuação, sem adversário. Só tu, a tua bike e a vontade de dar tudo mais uma vez.',
 
   'reasons.kicker': 'Porque adoramos isto',
   'reasons.title': 'Quatro razões. Mil sensações.',
   'reasons.1.title': 'A liberdade',
   'reasons.1.text':
-    'Sem horários, sem pista reservada. O mundo inteiro vira um pico. Pões o shape, empurras, és livre.',
+    'Sem horários, sem pista reservada. O mundo inteiro vira um pico. Sobes para a bike, pedalas, és livre.',
   'reasons.2.title': 'A comunidade',
   'reasons.2.text':
-    'No bmx park ninguém te pergunta de onde vens. Aplaudimos a tentativa tanto como o acerto. O crew primeiro.',
+    'No park ninguém te pergunta de onde vens. Aplaudimos a tentativa tanto como a aterragem. O crew primeiro.',
   'reasons.3.title': 'A persistência',
   'reasons.3.text':
     'Mil quedas por uma manobra. O bmx ensina-te a levantar, vez após vez, até ao clique.',
@@ -46,27 +46,27 @@ export const pt: Record<string, string> = {
   'tricks.kicker': 'O caderno de manobras',
   'tricks.title': 'As que nunca se esquecem.',
   'tricks.list': 'Lista de manobras',
-  'tricks.1.level': 'O primeiro amor',
+  'tricks.1.level': 'O primeiro voo',
   'tricks.1.text':
-    'Bater o tail, deslizar o pé da frente: o shape descola contigo. A manobra fundadora, a que abre todas as portas.',
+    'Puxa o guiador, carrega as pernas: as duas rodas descolam contigo. O bunny hop, a manobra fundadora que abre todas as portas.',
   'tricks.2.level': 'O grande clássico',
   'tricks.2.text':
-    'Um ollie mais um toque que faz girar o shape no seu eixo. A satisfação quando os pés caem no sítio certo não tem igual.',
+    'Um bunny hop mais um giro de 180°: a bike roda sob os teus pés. A satisfação quando as rodas caem no sítio certo não tem igual.',
   'tricks.3.level': 'A emoção do metal',
   'tricks.3.text':
-    'Deslizar o meio do shape numa barra ou curb. O som do slide é música.',
+    'Encaixa os pegs numa barra ou curb e faz grind. O som do metal a deslizar é música.',
   'tricks.4.level': 'O equilíbrio puro',
   'tricks.4.text':
-    'Rolar sobre duas rodas, em equilíbrio, o máximo de tempo possível. Simples de entender, uma vida para dominar.',
+    'Rolar sobre a roda traseira, em equilíbrio, o máximo de tempo possível. O manual: simples de entender, uma vida para dominar.',
   'tricks.5.level': 'O rito de passagem',
   'tricks.5.text':
-    'Os dois trucks apoiados na borda, fazes grind. Primeiro contacto real com o street, primeiras faíscas.',
+    'Um pontapé e o quadro dá uma volta completa sob os teus pés: o tailwhip. Primeiro grande arrepio, primeiras faíscas.',
 
   'marquee.1': 'para sempre',
   'marquee.2': 'ride or fall',
-  'marquee.3': 'push push push',
+  'marquee.3': 'pedal pedal pedal',
   'marquee.4': 'o chão é nosso',
-  'marquee.5': 'no comply',
+  'marquee.5': 'bar spin',
   'marquee.6': 'roll forever',
 
   'join.kicker': 'Rola connosco',

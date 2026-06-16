@@ -81,7 +81,7 @@ const PRESS: Record<Lang, Content> = {
   zh: {
     title: '媒体', subtitle: '谈论 bmx 所需的一切：简介、数据、logo 和直接联系方式。',
     taglineHeading: '一句话',
-    tagline: 'bmx 是一款滑板社区应用，没有广告也没有排名：视频片段、点位地图、滑手排行和消息。一起滑板。',
+    tagline: 'bmx 是一款BMX社区应用，没有广告也没有排名：视频片段、点位地图、车手排行和消息。一起BMX。',
     factsHeading: '关键数据',
     facts: ['可安装的 PWA（iOS / Android / 桌面），可离线使用', '免费 · bmx+ 选项（高清上传、特效、无广告）', '7 种语言：FR、EN、ES、DE、PT、中文、日本語', '欧洲托管，零广告追踪器'],
     logoHeading: 'Logo', logoLabel: 'PNG logo',
@@ -93,7 +93,7 @@ const PRESS: Record<Lang, Content> = {
   ja: {
     title: 'プレス', subtitle: 'bmx について語るために必要なすべて：ピッチ、数字、ロゴ、直接の連絡先。',
     taglineHeading: '一言で',
-    tagline: 'bmx は広告もランキングもないスケートのコミュニティアプリ：動画パート、スポットマップ、スケーターのランキング、メッセージ。みんなでスケート。',
+    tagline: 'bmx は広告もランキングもないBMXのコミュニティアプリ：動画パート、スポットマップ、ライダーのランキング、メッセージ。みんなでBMX。',
     factsHeading: '主な数字',
     facts: ['インストール可能な PWA（iOS / Android / デスクトップ）、オフライン対応', '無料 · bmx+ オプション（HDアップロード、エフェクト、広告なし）', '7言語：FR、EN、ES、DE、PT、中文、日本語', '欧州ホスティング、広告トラッカーゼロ'],
     logoHeading: 'ロゴ', logoLabel: 'PNG ロゴ',
