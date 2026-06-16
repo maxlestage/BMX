@@ -1,4 +1,6 @@
 use actix_cors::Cors;
+use actix_files::{Files, NamedFile};
+use actix_web::dev::{fn_service, ServiceRequest, ServiceResponse};
 use actix_web::{web, App, HttpServer};
 use sea_orm::{Database, DatabaseConnection};
 use tracing_actix_web::TracingLogger;
@@ -83,7 +85,11 @@ async fn main() -> std::io::Result<()> {
             .map(|p| format!("0.0.0.0:{p}"))
             .unwrap_or_else(|_| "0.0.0.0:8080".to_string())
     });
-    tracing::info!("bmx-api → http://{bind}");
+    // Dossier des fichiers statiques du front (build Vue). Servi par le même
+    // serveur que l'API → une seule app/URL, même origine, pas de CORS.
+    // Absent (ex. dev API seul) → on ne monte rien et seul /api/v1 répond.
+    let static_dir = std::env::var("STATIC_DIR").unwrap_or_else(|_| "./static".to_string());
+    tracing::info!("bmx-api → http://{bind} (static: {static_dir})");
 
     HttpServer::new(move || {
         let cors = Cors::default()
@@ -91,6 +97,7 @@ async fn main() -> std::io::Result<()> {
             .allow_any_method()
             .allow_any_header()
             .max_age(3600);
+        let sd = static_dir.clone();
 
         App::new()
             .app_data(web::Data::new(state.clone()))
@@ -200,8 +207,32 @@ async fn main() -> std::io::Result<()> {
                     .service(handlers::featured::index)
                     .service(handlers::featured::create),
             )
+            // Front Vue (statique) + fallback SPA → tout ce qui n'est pas
+            // /api/v1 renvoie index.html (routage par hash côté client).
+            .configure(|cfg| mount_static(cfg, &sd))
     })
     .bind(bind)?
     .run()
     .await
+}
+
+/// Monte le front statique sur `/` si le dossier existe, avec fallback SPA.
+fn mount_static(cfg: &mut web::ServiceConfig, dir: &str) {
+    if !std::path::Path::new(dir).exists() {
+        return;
+    }
+    let index = format!("{dir}/index.html");
+    cfg.service(
+        Files::new("/", dir)
+            .index_file("index.html")
+            .default_handler(fn_service(move |req: ServiceRequest| {
+                let index = index.clone();
+                async move {
+                    let (req, _payload) = req.into_parts();
+                    let file = NamedFile::open_async(&index).await?;
+                    let res = file.into_response(&req);
+                    Ok::<ServiceResponse, actix_web::Error>(ServiceResponse::new(req, res))
+                }
+            })),
+    );
 }
