@@ -1,0 +1,98 @@
+/* Tableau de bord admin (/admin). Réutilise les jetons de design globaux. */
+
+.admin {
+  max-width: 960px;
+  margin: 0 auto;
+  /* Dégage la barre de navigation fixe (comme .screen) + safe-area iOS. */
+  padding: calc(7.5rem + env(safe-area-inset-top)) clamp(1rem, 4vw, 1.5rem) 4rem;
+}
+
+.admin__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.admin__kicker {
+  margin: 0 0 0.2rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.admin__title {
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  line-height: 1.1;
+}
+
+.admin__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.9rem;
+}
+
+.admin__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 1.1rem 1.2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.admin__card-icon {
+  font-size: 1.4rem;
+}
+
+.admin__card-value {
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--cream);
+}
+
+.admin__card-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--cream-soft);
+}
+
+.admin__card-hint {
+  font-size: 0.78rem;
+  color: var(--cream-faint);
+}
+
+.admin__note {
+  margin-top: 1.4rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(230, 211, 167, 0.4);
+  border-radius: 14px;
+  background: rgba(230, 211, 167, 0.08);
+  font-size: 0.92rem;
+  color: var(--cream);
+}
+
+.admin__error {
+  color: #ff9b8a;
+  font-size: 0.92rem;
+}
+
+.admin__muted {
+  color: var(--cream-soft);
+}
+
+/* Écrans de garde (non connecté / non admin). */
+.admin--gate {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  min-height: 50vh;
+  justify-content: center;
+}

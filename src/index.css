@@ -1,0 +1,599 @@
+/* ============================================================
+   bmx — design system & base
+   Palette : gris foncé (#17191c), surface grise (#23262b),
+             texte gris clair (#ededec), accent couleur de la roue (#e6d3a7).
+   Polices système uniquement → 100 % hors-ligne, zéro requête.
+   ============================================================ */
+
+:root {
+  --bg: #17191c;
+  --ink: #23262b;
+  --cream: #ededec;
+  --cream-soft: rgba(237, 237, 236, 0.72);
+  --cream-faint: rgba(237, 237, 236, 0.4);
+  --accent: #e6d3a7;
+  --accent-2: #cdb482;
+  --line: rgba(237, 237, 236, 0.12);
+  --radius: 20px;
+  --display: ui-sans-serif, system-ui, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --body: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--cream);
+  font-family: var(--body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Grain de grip tape AU-DESSUS de tout le site (chaque section a son propre
+   fond opaque, donc un calque sous le contenu serait masqué). Overlay fixe,
+   sans interception des clics ; mode "screen" → grains clairs sur le sombre. */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.3;
+  mix-blend-mode: screen;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='linear' slope='1.6' intercept='-0.5'/%3E%3CfeFuncG type='linear' slope='1.6' intercept='-0.5'/%3E%3CfeFuncB type='linear' slope='1.6' intercept='-0.5'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size: 130px 130px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  z-index: 100;
+  background: var(--accent);
+  color: var(--ink);
+  padding: 0.75rem 1rem;
+  border-radius: 0 0 12px 0;
+  font-weight: 700;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* ---------- Boutons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-top-color: rgba(255, 255, 255, 0.32);
+  /* Relief « verre 3D » : highlight diagonal + lumière interne haute. */
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.18);
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+.btn:active {
+  transform: translateY(1px) scale(0.99);
+}
+.btn--solid {
+  color: var(--ink);
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.5) 0%, transparent 55%),
+    linear-gradient(135deg, #f0e0bb, var(--accent));
+}
+.btn--solid:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 14px 34px rgba(230, 211, 167, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.18);
+}
+.btn--ghost {
+  color: var(--cream);
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.12) 0%, transparent 60%),
+    rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+}
+.btn--ghost:hover {
+  transform: translateY(-3px);
+  border-color: rgba(230, 211, 167, 0.5);
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.18) 0%, transparent 60%),
+    rgba(255, 255, 255, 0.09);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.36),
+    0 0 28px rgba(230, 211, 167, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.26);
+}
+/* Pas de lift au survol sur écrans tactiles */
+@media (hover: none) {
+  .btn--solid:hover,
+  .btn--ghost:hover {
+    transform: none;
+  }
+}
+
+/* ---------- Titres de section ---------- */
+.section__kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 1rem;
+}
+.section__title {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(1.9rem, 5vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* ---------- Révélation au scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Le padding haut inclut la safe-area iOS (encoche) → le fond opaque couvre
+     toute la barre d'état, plus rien ne transparaît sous l'horloge. */
+  padding: calc(1.1rem + env(safe-area-inset-top)) clamp(1.1rem, 4vw, 3rem) 1.1rem;
+  transition: padding 0.3s ease;
+  /* Fond opaque porté par l'élément LUI-MÊME (et non un pseudo en z-index
+     négatif : iOS Safari peint parfois un ::before en z-index:-1 DERRIÈRE le
+     contenu de la page, laissant le texte défiler sous l'horloge). Un simple
+     background-color ne crée PAS de bloc englobant → le menu mobile en
+     position:fixed reste bien calé sur le viewport. */
+  background: var(--bg);
+}
+/* Fondu progressif juste SOUS la barre (44px), pour adoucir la limite avec le
+   contenu qui défile. Pas de z-index négatif. */
+.nav::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 44px;
+  background: linear-gradient(180deg, var(--bg) 0, transparent 100%);
+  pointer-events: none;
+}
+.nav--scrolled {
+  padding-top: calc(0.7rem + env(safe-area-inset-top));
+  padding-bottom: 0.7rem;
+}
+.nav__brand {
+  display: flex;
+  align-items: center;
+}
+.nav__logo {
+  display: block;
+  height: 46px;
+  width: auto;
+  transition: height 0.3s ease;
+}
+.nav--scrolled .nav__logo {
+  height: 38px;
+}
+.nav__brand-dot {
+  color: var(--accent);
+}
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.nav__links a {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--cream-soft);
+  transition: color 0.2s ease;
+}
+.nav__links a:hover {
+  color: var(--cream);
+}
+.nav__install {
+  background: var(--accent);
+  color: var(--ink);
+  border: none;
+  border-radius: 999px;
+  padding: 0.55rem 1.1rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+/* Sélecteur de langue */
+.lang {
+  position: relative;
+}
+.lang__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--cream);
+  padding: 0.4rem 0.7rem;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.lang__toggle:hover {
+  border-color: var(--accent);
+}
+.lang__menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.4rem);
+  list-style: none;
+  margin: 0;
+  padding: 0.3rem;
+  background: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  min-width: 150px;
+  z-index: 60;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+.lang--open .lang__menu {
+  display: block;
+}
+.lang__item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--cream-soft);
+  padding: 0.5rem 0.7rem;
+  border-radius: 8px;
+  font: inherit;
+  cursor: pointer;
+}
+.lang__item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--cream);
+}
+.lang__item.is-active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 8px;
+}
+.nav__burger span {
+  width: 26px;
+  height: 2px;
+  background: var(--cream);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+@media (max-width: 720px) {
+  .nav__burger {
+    display: flex;
+    position: relative;
+    z-index: 2; /* au-dessus de l'overlay pour rester cliquable (fermer) */
+  }
+  .nav__brand {
+    position: relative;
+    z-index: 0; /* sous l'overlay */
+  }
+  .nav__links {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.4rem;
+    /* Défilable + marge basse généreuse pour dégager la barre d'adresse mobile. */
+    padding: max(4.5rem, 12vh) 2rem calc(8rem + env(safe-area-inset-bottom));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background: var(--bg);
+    transform: translateX(100%);
+    transition: transform 0.32s cubic-bezier(0.2, 0.7, 0.2, 1);
+    z-index: 1;
+  }
+  .nav__links a {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 1.9rem;
+    letter-spacing: -0.02em;
+    color: var(--cream);
+  }
+  .nav__install {
+    margin-top: 0.6rem;
+    font-size: 1rem;
+    padding: 0.7rem 1.4rem;
+  }
+  .nav__links--open {
+    transform: none;
+  }
+
+  /* Sélecteur de langue dans le menu plein écran : options listées en ligne
+     (pas de menu flottant, qui serait coupé par la barre d'adresse mobile). */
+  .nav__links .lang {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .nav__links .lang__toggle {
+    display: none; /* inutile : les langues sont listées en dessous */
+  }
+  .nav__links .lang__menu {
+    display: flex; /* toujours visible dans le menu mobile */
+    position: static;
+    transform: none;
+    inset: auto;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.3rem;
+    box-shadow: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+  .nav__links .lang__item {
+    text-align: center;
+    font-size: 1.05rem;
+    padding: 0.7rem;
+    border: 1px solid var(--line);
+  }
+
+  /* Burger → croix quand le menu est ouvert */
+  .nav__burger--open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .nav__burger--open span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav__burger--open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+/* ============================================================
+   MARQUEE
+   ============================================================ */
+.marquee {
+  background: var(--accent);
+  color: var(--ink);
+  overflow: hidden;
+  padding: 0.9rem 0;
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+}
+.marquee__track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 26s linear infinite;
+}
+.marquee__item {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+}
+.marquee__star {
+  margin: 0 1.6rem;
+  font-size: 1rem;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ============================================================
+   INSTALL PROMPT (bannière flottante)
+   ============================================================ */
+.install {
+  position: fixed;
+  z-index: 10000; /* au-dessus du grain (9999) pour rester net */
+  left: 50%;
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  width: min(94vw, 460px);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.9rem 1rem;
+  background: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+  animation: slide-up 0.4s ease both;
+}
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+}
+.install__icon {
+  font-size: 1.6rem;
+}
+.install__copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+  font-size: 0.85rem;
+  color: var(--cream-soft);
+}
+.install__copy strong {
+  color: var(--cream);
+  font-size: 0.95rem;
+}
+.install__cta {
+  margin-left: auto;
+  background: var(--accent);
+  color: var(--ink);
+  border: none;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.install__close {
+  background: none;
+  border: none;
+  color: var(--cream-faint);
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0 0.2rem;
+}
+.install__close:hover {
+  color: var(--cream);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  text-align: center;
+  padding: 4rem 1.5rem 3rem;
+  border-top: 1px solid var(--line);
+}
+/* Quand la barre d'onglets fixe suit le footer (accueil), on dégage sa hauteur
+   pour que la dernière ligne ne passe pas dessous. */
+.footer:has(+ .tabbar) {
+  padding-bottom: calc(3rem + 72px + env(safe-area-inset-bottom));
+}
+.footer__logo {
+  display: block;
+  height: 88px;
+  width: auto;
+  margin: 0 auto 0.4rem;
+}
+.footer__tagline {
+  color: var(--cream-soft);
+  margin: 0.4rem 0 1.6rem;
+}
+.footer__links {
+  display: flex;
+  gap: 1.4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.6rem;
+}
+.footer__links a {
+  font-weight: 600;
+  color: var(--cream-soft);
+}
+.footer__links a:hover {
+  color: var(--accent);
+}
+.footer__links--legal {
+  margin-top: -0.4rem;
+  gap: 1rem;
+}
+.footer__links--legal a {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--cream-faint);
+}
+.footer__legal {
+  font-size: 0.8rem;
+  color: var(--cream-faint);
+}
+.footer__lang {
+  display: flex;
+  justify-content: center;
+}
+/* Dans le footer, le menu s'ouvre vers le haut pour ne pas déborder en bas. */
+.footer__lang .lang__menu {
+  top: auto;
+  bottom: calc(100% + 0.4rem);
+  right: 50%;
+  transform: translateX(50%);
+}

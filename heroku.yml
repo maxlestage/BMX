@@ -1,0 +1,7 @@
+# Déploiement Heroku par conteneur via le Dashboard (Deploy -> GitHub -> Deploy
+# Branch) ou `git push heroku main`. Contexte de build = racine du repo.
+build:
+  docker:
+    web: Dockerfile
+run:
+  web: api

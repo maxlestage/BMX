@@ -1,0 +1,100 @@
+LICENCE PROPRIÉTAIRE - BMX
+================================
+
+Copyright (c) 2024-2026 Lestage Maxime Nathan
+Né le 18 août 1995 à Bordeaux (33000), France
+
+Tous droits réservés. All rights reserved.
+
+1. PROPRIÉTÉ INTELLECTUELLE
+----------------------------
+Le logiciel "bmx", incluant l'ensemble de son code source, de sa documentation,
+de ses fichiers de configuration, de ses assets graphiques, de son architecture technique,
+de ses algorithmes, de ses bases de données et de tout élément constitutif du projet
+(ci-après "le Logiciel") est la propriété exclusive et intégrale de
+Lestage Maxime Nathan (ci-après "le Propriétaire").
+
+2. INTERDICTIONS
+-----------------
+Il est strictement interdit, sauf autorisation écrite et préalable du Propriétaire, de :
+
+  a) Copier, reproduire, dupliquer tout ou partie du Logiciel ;
+  b) Modifier, adapter, traduire, désassembler, décompiler ou procéder à de
+     l'ingénierie inverse du Logiciel ;
+  c) Forker, cloner ou créer des œuvres dérivées basées sur le Logiciel ;
+  d) Distribuer, publier, diffuser, transmettre ou mettre à disposition de tiers
+     tout ou partie du Logiciel, que ce soit à titre gratuit ou onéreux ;
+  e) Sous-licencier, louer, prêter ou céder le Logiciel à quelque titre que ce soit ;
+  f) Utiliser le Logiciel à des fins commerciales sans accord contractuel préalable ;
+  g) Rendre public le code source ou tout élément technique du Logiciel.
+
+3. DÉPÔT
+---------
+Tout accès non autorisé, toute tentative de fork, de clonage ou de redistribution
+constitue une violation de la présente licence et pourra faire l'objet de poursuites
+judiciaires.
+
+Les collaborateurs éventuellement autorisés à accéder au dépôt sont soumis à un
+accord de confidentialité (NDA) et ne disposent d'aucun droit de propriété sur
+le Logiciel ni sur ses composants.
+
+4. PROJET COMMERCIAL
+---------------------
+Le Logiciel est un projet commercial. Toute exploitation commerciale, directe ou
+indirecte, est réservée exclusivement au Propriétaire ou à toute entité juridique
+qu'il désignera expressément.
+
+5. MARQUE ET IDENTITÉ
+----------------------
+Le nom "bmx", la mention "bmx BMX company", le logo, le design,
+les éléments graphiques et l'identité visuelle associés constituent des éléments
+protégés. Toute utilisation, reproduction ou imitation est interdite sans
+autorisation écrite du Propriétaire.
+
+6. RESPONSABILITÉ DES UTILISATEURS POUR LES CONTENUS PUBLIÉS
+--------------------------------------------------------------
+L'application bmx permet aux utilisateurs de publier des contenus personnels.
+Chaque utilisateur est seul responsable des contenus qu'il publie sur la plateforme,
+incluant mais non limité à :
+
+  a) Les parts (vidéos) et les photos publiées ;
+  b) Les photos de profil ;
+  c) Les spots ajoutés sur la carte ;
+  d) Les messages envoyés dans les conversations.
+
+Le Propriétaire du Logiciel décline toute responsabilité concernant :
+  - Les contenus publiés par les utilisateurs ;
+  - La véracité, l'exactitude ou la légalité de ces contenus ;
+  - Les droits d'auteur ou droits à l'image relatifs aux contenus publiés par les utilisateurs ;
+  - Tout dommage résultant de la publication de contenus inappropriés ou illégaux.
+
+Les utilisateurs garantissent détenir tous les droits nécessaires sur les contenus qu'ils
+publient et acceptent d'en assumer l'entière responsabilité juridique et civile.
+Tout contenu illégal (contenus impliquant des mineurs, contenus à caractère pornographique
+non consenti, usurpation d'identité) sera supprimé immédiatement et pourra donner lieu
+à des poursuites.
+
+7. SANCTIONS
+-------------
+Toute violation de la présente licence expose le contrevenant à :
+  - Des poursuites civiles pour contrefaçon (articles L335-1 et suivants du
+    Code de la Propriété Intellectuelle) ;
+  - Des poursuites pénales pouvant entraîner jusqu'à 3 ans d'emprisonnement et
+    300 000 euros d'amende ;
+  - Le versement de dommages et intérêts au Propriétaire.
+
+8. LOI APPLICABLE ET JURIDICTION
+----------------------------------
+La présente licence est régie par le droit français.
+Tout litige relatif à son interprétation ou à son exécution sera soumis à la
+compétence exclusive des tribunaux de Bordeaux (France).
+
+9. CONTACT
+-----------
+Pour toute demande d'autorisation ou question relative à cette licence :
+Lestage Maxime Nathan
+Email : hello@bmx.bike
+
+---
+Ce fichier fait office de licence légale pour l'ensemble du projet bmx.
+Dernière mise à jour : 31 mai 2026

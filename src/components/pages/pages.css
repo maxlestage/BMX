@@ -1,0 +1,117 @@
+/* Pages statiques (footer) : À propos, Presse, Mentions légales */
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: calc(7.5rem + env(safe-area-inset-top)) clamp(1.2rem, 5vw, 2.5rem) 4rem;
+}
+.page__back {
+  display: inline-block;
+  margin-bottom: 1.6rem;
+  color: var(--cream-soft);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.page__back:hover { color: var(--accent); }
+.page__title {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(2rem, 6vw, 3rem);
+  letter-spacing: -0.03em;
+  margin: 0 0 0.5rem;
+}
+.page__sub {
+  color: var(--cream-soft);
+  max-width: 60ch;
+  margin: 0 0 2.4rem;
+  line-height: 1.6;
+}
+.page__h2 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.3rem;
+  margin: 0 0 0.8rem;
+}
+.page__p {
+  color: var(--cream-soft);
+  line-height: 1.75;
+  margin: 0 0 0.8rem;
+}
+.page__p a { color: var(--accent); }
+
+/* Cartes (À propos, Presse) — réutilise le style .card global */
+.page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Presse */
+.page__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.page__list li {
+  color: var(--cream-soft);
+  line-height: 1.6;
+  padding-left: 1.2rem;
+  position: relative;
+}
+.page__list li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+.page__mail { color: var(--accent); font-weight: 700; }
+.page__asset {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--cream);
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+.page__asset img { width: 40px; height: 40px; }
+
+/* Mentions légales : sommaire + sections ancrées */
+.page__toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.4rem;
+}
+.page__toc a {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--cream-soft);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+}
+.page__toc a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.legal__section {
+  margin-bottom: 2.6rem;
+  scroll-margin-top: 96px;
+}
+.legal__section h2 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  margin: 0 0 0.9rem;
+}
+.legal__section h3 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  margin: 1rem 0 0.3rem;
+}
