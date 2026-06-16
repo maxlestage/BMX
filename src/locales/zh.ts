@@ -5,7 +5,7 @@ export const zh: Record<string, string> = {
   'nav.why': '为什么',
   'nav.tricks': '招式',
   'nav.crew': '社区',
-  'nav.roll': '滑起来',
+  'nav.roll': '骑起来',
   'nav.install': '安装应用',
   'nav.home': 'bmx，首页',
   'nav.menuOpen': '打开菜单',
@@ -13,11 +13,11 @@ export const zh: Record<string, string> = {
   'nav.primary': '主导航',
 
   // Hero
-  'hero.title.l1': '滑板，',
+  'hero.title.l1': 'BMX，',
   'hero.title.l2a': '就是',
   'hero.title.accent': '永远',
   'hero.lede':
-    '四个轮子，一块板，飞驰而过的柏油路。献给世界上最简单的自由——滑行的自由——的一封情书。',
+    '两个轮子，一副车把，飞驰而过的柏油路。献给世界上最简单的自由——骑行的自由——的一封情书。',
   'hero.cta.manifesto': '阅读宣言',
   'hero.cta.join': '加入团队',
   'hero.scroll': '向下滑',
@@ -27,22 +27,22 @@ export const zh: Record<string, string> = {
   // Manifesto
   'manifesto.kicker': '宣言',
   'manifesto.text':
-    '我们爱上了一块木板和四个轮子。从那以后，每一条人行道都是一个约定，每一道斜坡都是一个问题，每一次摔倒都是重新开始的理由。',
+    '我们爱上了一副钢架和两个轮子。从那以后，每一条人行道都是一个约定，每一道斜坡都是一个问题，每一次摔倒都是重新跨上车的理由。',
   'manifesto.sign':
-    '滑板无所求。没有分数，没有对手。只有你、你的板，和再蹬一次的冲动。',
+    'BMX 无所求。没有分数，没有对手。只有你、你的车，和再冲一次的冲动。',
 
   // Reasons
   'reasons.kicker': '我们为何热爱',
   'reasons.title': '四个理由。千种感觉。',
   'reasons.1.title': '自由',
   'reasons.1.text':
-    '没有时间表，没有预订的场地。整个世界都成了点位。放下板，蹬出去，你就自由了。',
+    '没有时间表，没有预订的场地。整个世界都成了点位。跨上车，踩下去，你就自由了。',
   'reasons.2.title': '社区',
   'reasons.2.text':
-    '在滑板场，没人问你从哪来。我们为尝试鼓掌，不亚于为成功。团队至上。',
+    '在公园里，没人问你从哪来。我们为尝试鼓掌，不亚于为落地。团队至上。',
   'reasons.3.title': '坚持',
   'reasons.3.text':
-    '千百次摔倒，换来一个招式。滑板教会你一次次站起来，直到豁然开朗。',
+    '千百次摔倒，换来一个招式。BMX 教会你一次次站起来，直到豁然开朗。',
   'reasons.4.title': '创造力',
   'reasons.4.text':
     '一堵矮墙、一段台阶、一条长椅：由你来重新定义这座城市。每一条线路都是一个签名。',
@@ -51,41 +51,41 @@ export const zh: Record<string, string> = {
   'tricks.kicker': '招式手册',
   'tricks.title': '那些永生难忘的招式。',
   'tricks.list': '招式列表',
-  'tricks.1.level': '初恋',
+  'tricks.1.level': '初次腾空',
   'tricks.1.text':
-    '啪地敲下板尾，前脚一抹：板随你腾空。最根本的招式，开启一切的那一个。',
+    '拉起车把，蓄力双腿：两个轮子随你腾空。这就是 bunny hop，开启一切的根本招式。',
   'tricks.2.level': '经典之作',
   'tricks.2.text':
-    '一个 ollie，加上让板沿轴翻转的一拨。当双脚正好落回板上，那种满足无与伦比。',
+    '一个 bunny hop，加上 180° 转体：车在你脚下旋转。当车轮稳稳落回，那种满足无与伦比。',
   'tricks.3.level': '金属的快感',
-  'tricks.3.text': '用板的中段在杆或路缘上滑行。滑行的声音，就是音乐。',
+  'tricks.3.text': '把 pegs 卡在杆或路缘上开始 grind。金属滑过的声音，就是音乐。',
   'tricks.4.level': '纯粹的平衡',
   'tricks.4.text':
-    '用两个轮子保持平衡滑行，越久越好。一看就懂，一辈子才能精通。',
+    '用后轮保持平衡前行，越久越好。这就是 manual：一看就懂，一辈子才能精通。',
   'tricks.5.level': '成人礼',
   'tricks.5.text':
-    '两个支架卡在边沿上，开始 grind。与街式的第一次真正接触，第一束火花。',
+    '一脚踢出，车架在你脚下转满一圈：tailwhip。第一次大心跳，第一束火花。',
 
   // Marquee
   'marquee.1': '永远',
-  'marquee.2': '不滑就摔',
-  'marquee.3': '蹬 蹬 蹬',
+  'marquee.2': '不骑就摔',
+  'marquee.3': '踩 踩 踩',
   'marquee.4': '大地属于我们',
-  'marquee.5': 'no comply',
-  'marquee.6': '永远滑下去',
+  'marquee.5': 'bar spin',
+  'marquee.6': '永远骑下去',
 
   // Join
-  'join.kicker': '和我们一起滑',
+  'join.kicker': '和我们一起骑',
   'join.title': '团队在点位等你。',
   'join.lede':
-    '板聚、新鲜事、周日的照片。留下你的邮箱，开滑时我们叫你。',
+    '板聚、新鲜事、周日的照片。留下你的邮箱，开骑时我们叫你。',
   'join.thanks': '🚲 收到。柏油路上很快见！',
   'join.placeholder': 'you@email.com',
   'join.emailAria': '你的邮箱地址',
-  'join.submit': '我要滑',
+  'join.submit': '我要骑',
 
   // Footer
-  'footer.tagline': 'riders company · 滑板，永远',
+  'footer.tagline': 'riders company · BMX，永远',
   'footer.links': '页脚链接',
   'footer.legalLine': '© {year} bmx · 用爱与一点砂纸打造。',
 
@@ -93,19 +93,19 @@ export const zh: Record<string, string> = {
   'install.dialog': '安装 bmx',
   'install.title': '安装 bmx',
   'install.ios': '点击「分享」，然后选择「添加到主屏幕」。',
-  'install.generic': '把应用添加到主屏幕，离线也能滑。',
+  'install.generic': '把应用添加到主屏幕，离线也能骑。',
   'install.cta': '安装',
   'install.close': '关闭',
 
   // Community — général
   'crew.kicker': '社区',
-  'crew.title': '和团队一起滑',
+  'crew.title': '和团队一起骑',
   'crew.sub':
-    '发布你的片段，把点位标在地图上，参与投票。一起滑板。',
+    '发布你的片段，把点位标在地图上，参与投票。一起BMX。',
   'crew.tabs': '社区板块',
   'crew.tab.parts': '片段',
   'crew.tab.videos': '视频',
-  'crew.tab.riders': '滑手',
+  'crew.tab.riders': '车手',
   'crew.tab.spots': '点位',
   'crew.tab.polls': '投票',
 
@@ -131,7 +131,7 @@ export const zh: Record<string, string> = {
   'premium.perk.badge': '个人资料上的 ✦ 徽章',
   'premium.perk.noads': '无广告',
   'premium.go': '升级会员',
-  'premium.active': '✦ bmx+ 订阅已激活。感谢你让项目继续滑行 🚲',
+  'premium.active': '✦ bmx+ 订阅已激活。感谢你让项目继续骑行 🚲',
   'premium.manage': '管理',
   'premium.stats.parts': '片段',
   'premium.stats.likes': '点赞',
@@ -140,7 +140,7 @@ export const zh: Record<string, string> = {
 
   // Parts
   'parts.upload.title': '发布你的片段 🎬',
-  'parts.upload.titlePlaceholder': '标题（例：滑板场的一条线）',
+  'parts.upload.titlePlaceholder': '标题（例：BMX 公园的一条线）',
   'parts.fx.label': '剪辑特效',
   'parts.fx.grain': '颗粒',
   'parts.fx.locked': '仅限 bmx+',
@@ -187,15 +187,15 @@ export const zh: Record<string, string> = {
   'polls.voteGuest': '登录后即可投票',
 
   // Riders
-  'riders.search': '搜索滑手…',
-  'riders.guest': '登录后即可票选世界最佳滑手 🏆',
-  'riders.loading': '正在加载滑手…',
+  'riders.search': '搜索车手…',
+  'riders.guest': '登录后即可票选世界最佳车手 🏆',
+  'riders.loading': '正在加载车手…',
   'riders.notRated': '暂无评分',
   'riders.votes': '/10 · {n} 票',
   'riders.yourRating': '你的评分：{n}',
   'riders.rate': '评分',
   'riders.more': '显示更多（{n}）',
-  'riders.none': '没有找到滑手。',
+  'riders.none': '没有找到车手。',
   'riders.loadError': '加载失败。',
   'riders.voteError': '投票失败。',
 
@@ -226,7 +226,7 @@ export const zh: Record<string, string> = {
   'tab.home': '首页',
   'tab.crew': '团队',
   'tab.videos': '视频',
-  'tab.riders': '滑手',
+  'tab.riders': '车手',
   'tab.profile': '我的',
   'search.placeholder': '上海的栏杆和台沿…',
   'search.results': '个结果',
@@ -275,7 +275,7 @@ export const zh: Record<string, string> = {
   'contact.press.title': '媒体',
   'contact.press.text': '记者：采访、素材、访问权限。48 小时内回复。',
   'contact.partners.title': '合作',
-  'contact.partners.text': '滑板店、品牌、活动——一起滑吧。',
+  'contact.partners.text': 'BMX 店、品牌、活动——一起骑吧。',
   'contact.privacy.title': '隐私',
   'contact.privacy.text': '个人数据、GDPR、删除账号。',
   'parts.upload.tooBig': '视频太大（最大 175 MB）。',

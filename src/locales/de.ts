@@ -11,11 +11,11 @@ export const de: Record<string, string> = {
   'nav.menuClose': 'Menü schließen',
   'nav.primary': 'Hauptnavigation',
 
-  'hero.title.l1': 'BMXn',
+  'hero.title.l1': 'BMX',
   'hero.title.l2a': 'ist ',
   'hero.title.accent': 'für immer',
   'hero.lede':
-    'Vier Rollen, ein Brett und der vorbeiziehende Asphalt. Eine Liebeserklärung an die einfachste Freiheit der Welt – die Freiheit zu rollen.',
+    'Zwei Räder, ein Lenker und der vorbeiziehende Asphalt. Eine Liebeserklärung an die einfachste Freiheit der Welt – die Freiheit zu fahren.',
   'hero.cta.manifesto': 'Manifest lesen',
   'hero.cta.join': 'Der Crew beitreten',
   'hero.scroll': 'scroll',
@@ -24,21 +24,21 @@ export const de: Record<string, string> = {
 
   'manifesto.kicker': 'Das Manifest',
   'manifesto.text':
-    'Wir haben uns in ein Stück Holz und vier Rollen verliebt. Seitdem ist jeder Gehweg ein Versprechen, jede Rampe eine Frage, jeder Sturz ein Grund, neu anzufangen.',
+    'Wir haben uns in einen Stahlrahmen und zwei Räder verliebt. Seitdem ist jeder Gehweg ein Versprechen, jede Rampe eine Frage, jeder Sturz ein Grund, wieder aufzusteigen.',
   'manifesto.sign':
-    'BMXn verlangt nichts. Keine Punkte, kein Gegner. Nur du, dein Brett und die Lust, noch einmal anzuschieben.',
+    'BMX verlangt nichts. Keine Punkte, kein Gegner. Nur du, dein Bike und die Lust, es noch einmal zu pushen.',
 
   'reasons.kicker': 'Warum wir es lieben',
   'reasons.title': 'Vier Gründe. Tausend Gefühle.',
   'reasons.1.title': 'Freiheit',
   'reasons.1.text':
-    'Keine Öffnungszeiten, kein reservierter Platz. Die ganze Welt wird zum Spot. Brett hin, anschieben, frei sein.',
+    'Keine Öffnungszeiten, kein reservierter Platz. Die ganze Welt wird zum Spot. Aufs Bike, treten, frei sein.',
   'reasons.2.title': 'Community',
   'reasons.2.text':
-    'Im BMXpark fragt niemand, woher du kommst. Wir feiern den Versuch genauso wie den Landing. Crew zuerst.',
+    'Im Park fragt niemand, woher du kommst. Wir feiern den Versuch genauso wie die Landung. Crew zuerst.',
   'reasons.3.title': 'Beharrlichkeit',
   'reasons.3.text':
-    'Tausend Stürze für einen Trick. BMXn bringt dir bei, wieder aufzustehen, immer wieder, bis es klickt.',
+    'Tausend Stürze für einen Trick. BMX bringt dir bei, wieder aufzustehen, immer wieder, bis es klickt.',
   'reasons.4.title': 'Kreativität',
   'reasons.4.text':
     'Eine Mauer, eine Treppe, eine Bank: Es liegt an dir, die Stadt neu zu erfinden. Jede Line ist eine Signatur.',
@@ -46,27 +46,27 @@ export const de: Record<string, string> = {
   'tricks.kicker': 'Das Trick-Buch',
   'tricks.title': 'Die, die man nie vergisst.',
   'tricks.list': 'Trick-Liste',
-  'tricks.1.level': 'Die erste Liebe',
+  'tricks.1.level': 'Der erste Air',
   'tricks.1.text':
-    'Das Tail knallen, den vorderen Fuß schieben: Das Brett hebt mit dir ab. Der Grund-Trick, der alle Türen öffnet.',
+    'Am Lenker ziehen, die Beine laden: Beide Räder heben mit dir ab. Der Bunny Hop – der Grund-Trick, der alle Türen öffnet.',
   'tricks.2.level': 'Der große Klassiker',
   'tricks.2.text':
-    'Ein Ollie plus ein Flick, der das Brett um seine Achse dreht. Das Gefühl, wenn die Füße genau treffen, ist unübertroffen.',
+    'Ein Bunny Hop plus eine 180°-Drehung: Das Bike dreht sich unter dir. Das Gefühl, wenn die Räder genau treffen, ist unübertroffen.',
   'tricks.3.level': 'Der Nervenkitzel des Metalls',
   'tricks.3.text':
-    'Die Mitte des Bretts über eine Rail oder Curb sliden. Das Geräusch des Slides ist Musik.',
+    'Die Pegs auf einer Rail oder Curb einrasten und grinden. Das Geräusch des gleitenden Metalls ist Musik.',
   'tricks.4.level': 'Reine Balance',
   'tricks.4.text':
-    'Auf zwei Rollen rollen, im Gleichgewicht, so lange wie möglich. Leicht zu verstehen, ein Leben lang zu meistern.',
+    'Auf dem Hinterrad rollen, im Gleichgewicht, so lange wie möglich. Der Manual: leicht zu verstehen, ein Leben lang zu meistern.',
   'tricks.5.level': 'Der Initiationsritus',
   'tricks.5.text':
-    'Beide Achsen auf der Kante, du grindest. Erster echter Kontakt mit dem Street, erste Funken.',
+    'Ein Tritt, der Rahmen wirbelt eine volle Drehung unter dir: der Tailwhip. Erster großer Nervenkitzel, erste Funken.',
 
   'marquee.1': 'für immer',
   'marquee.2': 'ride or fall',
-  'marquee.3': 'push push push',
+  'marquee.3': 'pedal pedal pedal',
   'marquee.4': 'der Boden gehört uns',
-  'marquee.5': 'no comply',
+  'marquee.5': 'bar spin',
   'marquee.6': 'roll forever',
 
   'join.kicker': 'Roll mit uns',
