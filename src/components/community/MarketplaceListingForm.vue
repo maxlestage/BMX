@@ -7,14 +7,14 @@ import { resizeImage } from '../../lib/image'
 
 const emit = defineEmits<{ created: [l: Listing]; cancel: [] }>()
 
-const CATEGORIES = ['deck', 'trucks', 'wheels', 'bearings', 'shoes', 'apparel', 'complete', 'other']
+const CATEGORIES = ['frame', 'bars', 'wheels', 'cranks', 'tires', 'apparel', 'complete', 'other']
 const CONDITIONS = ['new', 'good', 'worn']
 
 const { t } = useI18n()
 const title = ref('')
 const description = ref('')
 const price = ref('')
-const category = ref('deck')
+const category = ref('frame')
 const condition = ref('good')
 const city = ref('')
 const photos = ref<string[]>([])
