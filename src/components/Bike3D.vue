@@ -11,7 +11,7 @@ let renderer: THREE.WebGLRenderer | null = null
 let ro: ResizeObserver | null = null
 
 const TIRE = 0x16181c
-const FRAME = 0xededec
+const FRAME = 0xc4d8ee
 const ACCENT = 0xff2e63
 const STEEL = 0xb9bec6
 
