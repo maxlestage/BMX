@@ -38,6 +38,19 @@ body {
   overflow-x: hidden;
 }
 
+/* Champs auto-remplis (Safari/Chrome) : garder le thème sombre + texte bleu
+   au lieu du jaune par défaut du navigateur. */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: var(--cream);
+  -webkit-box-shadow: 0 0 0 1000px var(--ink) inset;
+  caret-color: var(--cream);
+  transition: background-color 9999s ease-out 0s;
+}
+
 /* Grain de grip tape AU-DESSUS de tout le site (chaque section a son propre
    fond opaque, donc un calque sous le contenu serait masqué). Overlay fixe,
    sans interception des clics ; mode "screen" → grains clairs sur le sombre. */
@@ -138,7 +151,7 @@ svg {
 .btn--solid:hover {
   transform: translateY(-3px);
   box-shadow:
-    0 14px 34px rgba(230, 211, 167, 0.32),
+    0 14px 34px rgba(95, 134, 168, 0.32),
     inset 0 1px 0 rgba(255, 255, 255, 0.4),
     inset 0 -1px 0 rgba(0, 0, 0, 0.18);
 }
@@ -152,13 +165,13 @@ svg {
 }
 .btn--ghost:hover {
   transform: translateY(-3px);
-  border-color: rgba(230, 211, 167, 0.5);
+  border-color: rgba(95, 134, 168, 0.5);
   background:
     linear-gradient(165deg, rgba(255, 255, 255, 0.18) 0%, transparent 60%),
     rgba(255, 255, 255, 0.09);
   box-shadow:
     0 12px 30px rgba(0, 0, 0, 0.36),
-    0 0 28px rgba(230, 211, 167, 0.14),
+    0 0 28px rgba(95, 134, 168, 0.14),
     inset 0 1px 0 rgba(255, 255, 255, 0.26);
 }
 /* Pas de lift au survol sur écrans tactiles */

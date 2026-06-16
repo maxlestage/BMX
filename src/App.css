@@ -246,14 +246,14 @@ main {
 }
 .card:hover {
   transform: translateY(-8px) scale(1.02);
-  border-color: rgba(230, 211, 167, 0.4);
-  border-top-color: rgba(230, 211, 167, 0.5);
+  border-color: rgba(95, 134, 168, 0.4);
+  border-top-color: rgba(95, 134, 168, 0.5);
   background:
     linear-gradient(165deg, rgba(255, 255, 255, 0.18) 0%, transparent 55%),
-    linear-gradient(180deg, rgba(230, 211, 167, 0.08), rgba(188, 204, 219, 0.02));
+    linear-gradient(180deg, rgba(95, 134, 168, 0.08), rgba(188, 204, 219, 0.02));
   box-shadow:
     0 20px 48px rgba(0, 0, 0, 0.4),
-    0 0 40px rgba(230, 211, 167, 0.1),
+    0 0 40px rgba(95, 134, 168, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.2),
     inset 0 -1px 0 rgba(0, 0, 0, 0.16);
 }
@@ -375,7 +375,7 @@ main {
   margin: 0 auto;
   text-align: center;
   background:
-    radial-gradient(600px 300px at 50% -20%, rgba(230, 211, 167, 0.18), transparent 65%),
+    radial-gradient(600px 300px at 50% -20%, rgba(95, 134, 168, 0.18), transparent 65%),
     var(--ink);
   border: 1px solid var(--line);
   border-radius: 28px;
@@ -549,7 +549,7 @@ main {
 }
 .tabbar__item.is-active .tabbar__icon {
   transform: translateY(-2px) scale(1.12);
-  filter: drop-shadow(0 0 8px rgba(230, 211, 167, 0.6));
+  filter: drop-shadow(0 0 8px rgba(95, 134, 168, 0.6));
 }
 .tabbar__icon {
   font-size: 1.35rem;
@@ -612,7 +612,7 @@ main {
   border-radius: 50%;
   padding: 3px;
   background: linear-gradient(135deg, var(--accent), #3f5d75 60%, #fff);
-  box-shadow: 0 0 12px rgba(230, 211, 167, 0.4);
+  box-shadow: 0 0 12px rgba(95, 134, 168, 0.4);
   display: flex;
 }
 .story__img, .story__ph {
