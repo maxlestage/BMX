@@ -4,7 +4,7 @@
 
 `bmx riders company`
 
-**bmx** est une **communauté de bmx** : une PWA installable (React 19 + Bun)
+**bmx** est une **communauté de bmx** : une PWA installable (Vue 3 + Vite)
 adossée à une **API Rust**, plus une **app iOS native** SwiftUI. Au-delà de la landing
 « lettre d'amour au bmx », l'app propose un vrai réseau — parts vidéo, carte des
 spots, classement des riders, messagerie, notifications et abonnement premium.
@@ -34,9 +34,8 @@ spots, classement des riders, messagerie, notifications et abonnement premium.
 ## Stack
 
 **Front (PWA)** — `./` + `src/`
-- **Bun** : runtime, bundler (`Bun.build`) et serveur de dev.
-- **React 19** + TypeScript strict, **CSS maison** (polices système, zéro requête réseau).
-- **Leaflet** (carte des spots), **React Three Fiber / three** (deck 3D du hero).
+- **Vue 3** (`<script setup>`) + **Vite** + TypeScript strict, **CSS maison** (polices système, zéro requête réseau).
+- **Leaflet** (carte des spots), **three.js** (vélo BMX 3D du hero, `Bike3D.vue`, chargé à la demande).
 
 **Back (API)** — `backend/`
 - **Rust** · **actix-web 4** · **SeaORM 1.1** · **PostgreSQL** (prod) / **SQLite** (dev).
@@ -50,31 +49,33 @@ spots, classement des riders, messagerie, notifications et abonnement premium.
 ## Monorepo
 
 ```
-build.ts / dev.ts        Build prod & serveur de dev Bun (front)
+index.html / vite.config.ts   Entrée + config de build Vite (front)
 src/
-  App.tsx                Shell (onglets + routeur de pages par hash)
+  main.ts                Point d'entrée (monte App.vue, service worker)
+  App.vue                Shell (onglets + routeur de pages par hash)
   api.ts                 Client API typé (JWT)
-  auth.tsx / ui.tsx      Contextes auth & UI globale
-  i18n.tsx               i18n (7 langues, détection auto)
+  auth.ts / ui.ts        Stores réactifs auth & UI globale
+  i18n.ts                i18n (7 langues, détection auto)
+  composables/           useReveal, usePwaInstall
   locales/               fr · en · es · de · pt · zh · ja
-  components/
+  components/              (.vue)
     community/           Account, Parts, Spots, Riders, Polls, Videos
     pages/               About, Press, Legal (pages du footer)
-    …                    Nav, Hero, Messages, TabBar, Avatar, ProfileModal, …
+    …                    Nav, Hero, Bike3D, Messages, TabBar, Avatar, ProfileModal, …
 public/                  sw.js, manifest, offline.html, icônes
 backend/
   api/src/handlers/      accounts, parts, spots, messages, push, billing, media, …
   entity/ · migration/   modèles & migrations SeaORM
 ios/                     app iOS native SwiftUI (Xcode)
-scripts/gen_icons.py     génération des icônes PWA
+scripts/gen_logo.py      logo bmx (wordmark + vélo) ; gen_icons.py → icônes PWA
 ```
 
 ## Démarrer
 
 **Front**
 ```bash
-bun install
-bun run dev        # → http://localhost:3000  (bundling à la volée)
+bun install        # ou npm install
+bun run dev        # → Vite (http://localhost:5173)
 ```
 
 **Back** (SQLite par défaut, migrations appliquées au démarrage)
@@ -94,9 +95,9 @@ en prod il vise l'API Heroku. Surchargeable au build via `BMX_API_URL`.
 ## Build & vérifications
 
 ```bash
-bun run build      # → dist/ (HTML + assets fingerprintés + fichiers PWA)
-bun run preview    # build puis sert dist/
-bun run typecheck  # tsc --noEmit (strict)
+bun run build      # vue-tsc + vite build → dist/ (assets fingerprintés + PWA)
+bun run preview    # sert dist/ (vite preview)
+bun run typecheck  # vue-tsc --noEmit (strict)
 
 cd backend && cargo build --release && cargo test
 ```
