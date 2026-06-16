@@ -1,7 +1,7 @@
 /* ============================================================
    bmx — design system & base
    Palette : gris foncé (#17191c), surface grise (#23262b),
-             texte gris clair (#c4d8ee), accent couleur de la roue (#e6d3a7).
+             texte gris clair (#c4d8ee), accent couleur de la roue (#5e9fd6).
    Polices système uniquement → 100 % hors-ligne, zéro requête.
    ============================================================ */
 
@@ -11,8 +11,8 @@
   --cream: #c4d8ee;
   --cream-soft: rgba(196, 216, 238, 0.72);
   --cream-faint: rgba(196, 216, 238, 0.4);
-  --accent: #e6d3a7;
-  --accent-2: #cdb482;
+  --accent: #5e9fd6;
+  --accent-2: #3f72a8;
   --line: rgba(196, 216, 238, 0.12);
   --radius: 20px;
   --display: ui-sans-serif, system-ui, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
@@ -133,7 +133,7 @@ svg {
   color: var(--ink);
   background:
     linear-gradient(165deg, rgba(255, 255, 255, 0.5) 0%, transparent 55%),
-    linear-gradient(135deg, #f0e0bb, var(--accent));
+    linear-gradient(135deg, #9fc7ec, var(--accent));
 }
 .btn--solid:hover {
   transform: translateY(-3px);
