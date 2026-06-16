@@ -18,7 +18,7 @@ use crate::{
 use super::Pagination;
 
 const CATEGORIES: &[&str] = &[
-    "deck", "trucks", "wheels", "bearings", "shoes", "apparel", "complete", "other",
+    "frame", "bars", "wheels", "cranks", "tires", "apparel", "complete", "other",
 ];
 const CONDITIONS: &[&str] = &["new", "good", "worn"];
 
