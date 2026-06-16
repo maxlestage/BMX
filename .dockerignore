@@ -1,0 +1,12 @@
+# Contexte de build Heroku (racine). On exclut tout sauf le backend utile.
+backend/target/
+**/target/
+*.db
+*.db-shm
+*.db-wal
+node_modules/
+dist/
+.git/
+src/
+public/
+ios/

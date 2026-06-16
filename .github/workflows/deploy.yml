@@ -1,0 +1,71 @@
+name: Déploiement GitHub Pages
+
+# Build de la PWA avec Bun puis publication sur GitHub Pages.
+# Le site sera servi sur https://maxlestage.github.io/BMX/
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Permissions nécessaires au déploiement Pages via OIDC.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Un seul déploiement à la fois ; on annule les runs obsolètes.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Installer Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Installer les dépendances
+        run: bun install --frozen-lockfile
+
+      - name: Vérification des types
+        run: bun run typecheck
+
+      - name: Build de production
+        run: bun run build
+        env:
+          # URL publique de l'API (Heroku). À définir dans les variables du dépôt :
+          # Settings → Secrets and variables → Actions → Variables.
+          # Ex. https://bmx-api.herokuapp.com/api/v1
+          BMX_API_URL: ${{ vars.BMX_API_URL }}
+
+      - name: Configurer Pages
+        uses: actions/configure-pages@v5
+        with:
+          # Active GitHub Pages (source = Actions) si ce n'est pas déjà fait,
+          # sans passer par les réglages du dépôt. Nécessite `pages: write`.
+          enablement: true
+
+      - name: Uploader l'artefact (dist/)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Déployer sur GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
