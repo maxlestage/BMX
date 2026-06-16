@@ -1,19 +1,19 @@
 /* ============================================================
    bmx — design system & base
    Palette : gris foncé (#17191c), surface grise (#23262b),
-             texte gris clair (#c4d8ee), accent couleur de la roue (#5e9fd6).
+             texte gris clair (#bcccdb), accent couleur de la roue (#5f86a8).
    Polices système uniquement → 100 % hors-ligne, zéro requête.
    ============================================================ */
 
 :root {
   --bg: #17191c;
   --ink: #23262b;
-  --cream: #c4d8ee;
-  --cream-soft: rgba(196, 216, 238, 0.72);
-  --cream-faint: rgba(196, 216, 238, 0.4);
-  --accent: #5e9fd6;
-  --accent-2: #3f72a8;
-  --line: rgba(196, 216, 238, 0.12);
+  --cream: #bcccdb;
+  --cream-soft: rgba(188, 204, 219, 0.72);
+  --cream-faint: rgba(188, 204, 219, 0.4);
+  --accent: #5f86a8;
+  --accent-2: #3f5d75;
+  --line: rgba(188, 204, 219, 0.12);
   --radius: 20px;
   --display: ui-sans-serif, system-ui, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   --body: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial,
@@ -133,7 +133,7 @@ svg {
   color: var(--ink);
   background:
     linear-gradient(165deg, rgba(255, 255, 255, 0.5) 0%, transparent 55%),
-    linear-gradient(135deg, #9fc7ec, var(--accent));
+    linear-gradient(135deg, #aac0d4, var(--accent));
 }
 .btn--solid:hover {
   transform: translateY(-3px);

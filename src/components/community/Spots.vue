@@ -11,7 +11,7 @@ import { useI18n } from '../../i18n'
 import { useUI } from '../../ui'
 import { resizeImage } from '../../lib/image'
 
-const CREAM = '#5e9fd6'
+const CREAM = '#5f86a8'
 const SPOT_TYPES = ['street', 'park', 'plaza', 'bowl', 'diy']
 const FRANCE: L.LatLngTuple = [46.6, 2.4]
 
