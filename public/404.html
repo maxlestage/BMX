@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>bmx</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #17191c;
+        color: #ededec;
+        font-family: system-ui, sans-serif;
+      }
+      .x {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+    <script>
+      // Fallback SPA pour GitHub Pages (pas de routage serveur).
+      // L'app est servie sous un sous-chemin (ex. /BMX/) avec des chemins
+      // d'assets relatifs : on ne peut donc pas rendre l'app à une URL profonde.
+      // On redirige vers la racine de l'app en convertissant /admin → #admin.
+      (function () {
+        var l = window.location
+        var path = l.pathname.replace(/\/+$/, '')
+        if (/\/admin$/.test(path)) {
+          // Retire le segment /admin, garde la base de l'app, ajoute #admin.
+          l.replace(path.replace(/\/admin$/, '/') + l.search + '#admin')
+        } else {
+          // Tout autre chemin inconnu → dossier parent (racine de l'app).
+          l.replace(l.pathname.replace(/[^/]*$/, '') + l.search + l.hash)
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <div class="x">Redirection…</div>
+  </body>
+</html>

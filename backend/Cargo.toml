@@ -1,0 +1,77 @@
+[workspace]
+resolver = "2"
+members = ["api", "entity", "migration"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+# Web
+actix-web         = "4"
+actix-cors        = "0.7"
+tracing-actix-web = "0.7"
+
+# DB / ORM
+sea-orm = { version = "1.1", features = [
+    "sqlx-postgres",
+    "sqlx-sqlite",
+    "runtime-tokio-rustls",
+    "macros",
+    "with-chrono",
+    "with-uuid",
+    "with-json",
+    "with-rust_decimal",
+] }
+sea-orm-migration = { version = "1.1", features = [
+    "sqlx-postgres",
+    "sqlx-sqlite",
+    "runtime-tokio-rustls",
+] }
+
+# Auth & crypto
+argon2       = "0.5"
+jsonwebtoken = "9"
+
+# Validation / sanitization
+validator = { version = "0.18", features = ["derive"] }
+ammonia   = "4"
+
+# Observabilité
+tracing            = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Async / utilitaires
+tokio        = { version = "1", features = ["full"] }
+serde        = { version = "1", features = ["derive"] }
+serde_json   = "1"
+chrono       = { version = "0.4", features = ["serde"] }
+uuid         = { version = "1", features = ["serde", "v4"] }
+rust_decimal = { version = "1", features = ["serde-with-str"] }
+anyhow       = "1"
+thiserror    = "2"
+dotenvy      = "0.15"
+rand         = "0.8"
+async-trait  = "0.1"
+
+# Imports externes (riders theboardr, vidéos YouTube Thrasher)
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls-native-roots", "gzip"] }
+regex   = "1"
+
+# Paiement Stripe : vérification de signature des webhooks (HMAC-SHA256)
+hmac = "0.12"
+sha2 = "0.10"
+hex  = "0.4"
+
+# Web Push (notifications natives navigateur) : VAPID + chiffrement aes128gcm,
+# 100 % RustCrypto (pas d'OpenSSL — compatible avec la pile rustls existante).
+web-push-native = "0.4"
+base64ct        = { version = "1", features = ["alloc", "std"] }
+
+# Profil release : binaire rapide, link raisonnable.
+[profile.release]
+opt-level = 3
+codegen-units = 16
+lto = "thin"
+strip = true
