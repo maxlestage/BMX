@@ -1,0 +1,8 @@
+# Contexte de build minimal : pas d'artefacts ni de base locale.
+target/
+**/target/
+*.db
+*.db-shm
+*.db-wal
+.env
+.git/

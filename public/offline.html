@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#17191c" />
+    <title>Hors ligne — bmx</title>
+    <style>
+      html, body { margin:0; padding:0; background:#17191c; color:#ededec;
+        font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+        -webkit-font-smoothing:antialiased; min-height:100vh; }
+      body { display:flex; align-items:center; justify-content:center; padding:1.5rem; }
+      .card { max-width:460px; width:100%; text-align:center;
+        background:rgba(237,237,236,0.04); border:1px solid rgba(237,237,236,0.1);
+        border-radius:24px; padding:2.8rem 2rem; }
+      .emoji { font-size:3.4rem; line-height:1; margin-bottom:1rem; }
+      h1 { font-size:1.7rem; margin:0 0 .6rem; letter-spacing:-.02em; }
+      p { margin:0 0 1.6rem; color:rgba(237,237,236,.72); line-height:1.55; }
+      button { min-height:48px; padding:.8rem 1.6rem; border-radius:999px; border:none;
+        background:#e6d3a7; color:#23262b; font:inherit; font-weight:700; cursor:pointer; }
+      button:hover { background:#f0e3c2; }
+    </style>
+  </head>
+  <body>
+    <main class="card" role="alert">
+      <div class="emoji" aria-hidden="true">🚲</div>
+      <h1>Roue libre… hors-ligne</h1>
+      <p>Pas de réseau pour le moment. Vérifie ta connexion, puis repousse&nbsp;!</p>
+      <button type="button" onclick="location.reload()">Réessayer</button>
+    </main>
+  </body>
+</html>

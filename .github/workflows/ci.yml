@@ -1,0 +1,32 @@
+name: CI
+
+# Vérifie que le projet compile (types + build) sur chaque PR
+# et sur les pushs hors de main (main est couvert par le déploiement).
+
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+  workflow_dispatch:
+
+jobs:
+  check:
+    name: Typecheck & build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Installer Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Installer les dépendances
+        run: bun install --frozen-lockfile
+
+      - name: Vérification des types
+        run: bun run typecheck
+
+      - name: Build de production
+        run: bun run build

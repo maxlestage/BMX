@@ -1,0 +1,52 @@
+//! Entités SeaORM du backend `bmx`.
+//! Une table = un module. Les `Entity` sont ré-exportées pour un usage concis.
+
+pub mod artwork;
+pub mod contest;
+pub mod contest_entry;
+pub mod contest_vote;
+pub mod featured_account;
+pub mod listing;
+pub mod media;
+pub mod message;
+pub mod news_article;
+pub mod offer;
+pub mod part;
+pub mod poll;
+pub mod poll_option;
+pub mod poll_vote;
+pub mod push_subscription;
+pub mod session_member;
+pub mod shop;
+pub mod bmx_session;
+pub mod rider;
+pub mod rider_rating;
+pub mod sound;
+pub mod spot;
+pub mod user;
+pub mod video;
+
+pub use artwork::Entity as Artwork;
+pub use contest::Entity as Contest;
+pub use contest_entry::Entity as ContestEntry;
+pub use contest_vote::Entity as ContestVote;
+pub use featured_account::Entity as FeaturedAccount;
+pub use listing::Entity as Listing;
+pub use media::Entity as Media;
+pub use message::Entity as Message;
+pub use news_article::Entity as NewsArticle;
+pub use offer::Entity as Offer;
+pub use part::Entity as Part;
+pub use poll::Entity as Poll;
+pub use poll_option::Entity as PollOption;
+pub use poll_vote::Entity as PollVote;
+pub use push_subscription::Entity as PushSubscription;
+pub use session_member::Entity as SessionMember;
+pub use shop::Entity as Shop;
+pub use bmx_session::Entity as BMXSession;
+pub use rider::Entity as Rider;
+pub use rider_rating::Entity as RiderRating;
+pub use sound::Entity as Sound;
+pub use spot::Entity as Spot;
+pub use user::Entity as User;
+pub use video::Entity as Video;

@@ -1,0 +1,28 @@
+{
+  "name": "bmx",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "bmx — une lettre d'amour au bmx. PWA one-page en React + Bun.",
+  "scripts": {
+    "dev": "bun run dev.ts",
+    "build": "bun run build.ts",
+    "preview": "bun run build.ts && bunx serve dist",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^9.0.0",
+    "leaflet": "^1.9.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "three": "^0.171.0"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.12",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.171.0",
+    "typescript": "~5.9.3"
+  }
+}
