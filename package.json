@@ -3,26 +3,25 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "bmx — une lettre d'amour au bmx. PWA one-page en React + Bun.",
+  "description": "bmx — une lettre d'amour au BMX. PWA communautaire en Vue 3 + Vite.",
   "scripts": {
-    "dev": "bun run dev.ts",
-    "build": "bun run build.ts",
-    "preview": "bun run build.ts && bunx serve dist",
-    "typecheck": "tsc --noEmit -p tsconfig.app.json"
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@react-three/fiber": "^9.0.0",
     "leaflet": "^1.9.4",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "three": "^0.171.0"
+    "three": "^0.171.0",
+    "vue": "^3.5.13"
   },
   "devDependencies": {
     "@types/leaflet": "^1.9.12",
     "@types/node": "^24.10.1",
-    "@types/react": "^19.2.7",
-    "@types/react-dom": "^19.2.3",
     "@types/three": "^0.171.0",
-    "typescript": "~5.9.3"
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "~5.9.3",
+    "vite": "^6.0.7",
+    "vue-tsc": "^2.2.0"
   }
 }
