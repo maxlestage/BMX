@@ -13,6 +13,7 @@ entity    = { path = "../entity" }
 migration = { path = "../migration" }
 
 actix-web         = { workspace = true }
+actix-files       = { workspace = true }
 actix-cors        = { workspace = true }
 tracing-actix-web = { workspace = true }
 
