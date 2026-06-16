@@ -15,7 +15,7 @@ export const es: Record<string, string> = {
   'hero.title.l2a': 'es ',
   'hero.title.accent': 'para siempre',
   'hero.lede':
-    'Cuatro ruedas, una tabla y el asfalto que pasa. Una carta de amor a la libertad más simple del mundo: la de rodar.',
+    'Dos ruedas, un manillar y el asfalto que pasa. Una carta de amor a la libertad más simple del mundo: la de rodar.',
   'hero.cta.manifesto': 'Leer el manifiesto',
   'hero.cta.join': 'Unirse al crew',
   'hero.scroll': 'scroll',
@@ -24,18 +24,18 @@ export const es: Record<string, string> = {
 
   'manifesto.kicker': 'El manifiesto',
   'manifesto.text':
-    'Nos enamoramos de un trozo de madera y cuatro ruedas. Desde entonces, cada acera es una promesa, cada rampa una pregunta, cada caída una razón para volver a empezar.',
+    'Nos enamoramos de un cuadro de acero y dos ruedas. Desde entonces, cada acera es una promesa, cada rampa una pregunta, cada caída una razón para volver a subirse.',
   'manifesto.sign':
-    'El bmx no pide nada. Sin marcador, sin rival. Solo tú, tu tabla y las ganas de empujar una vez más.',
+    'El bmx no pide nada. Sin marcador, sin rival. Solo tú, tu bici y las ganas de darlo todo una vez más.',
 
   'reasons.kicker': 'Por qué nos encanta',
   'reasons.title': 'Cuatro razones. Mil sensaciones.',
   'reasons.1.title': 'La libertad',
   'reasons.1.text':
-    'Sin horarios, sin pista reservada. El mundo entero se convierte en un spot. Pones la tabla, empujas, eres libre.',
+    'Sin horarios, sin pista reservada. El mundo entero se convierte en un spot. Te subes a la bici, pedaleas, eres libre.',
   'reasons.2.title': 'La comunidad',
   'reasons.2.text':
-    'En el bmx park nadie te pregunta de dónde vienes. Aplaudimos el intento tanto como el logro. El crew primero.',
+    'En el park nadie te pregunta de dónde vienes. Aplaudimos el intento tanto como el aterrizaje. El crew primero.',
   'reasons.3.title': 'La perseverancia',
   'reasons.3.text':
     'Mil caídas por un truco. El bmx te enseña a levantarte, una y otra vez, hasta que sale.',
@@ -46,27 +46,27 @@ export const es: Record<string, string> = {
   'tricks.kicker': 'El cuaderno de trucos',
   'tricks.title': 'Los que nunca se olvidan.',
   'tricks.list': 'Lista de trucos',
-  'tricks.1.level': 'El primer amor',
+  'tricks.1.level': 'El primer vuelo',
   'tricks.1.text':
-    'Golpear el tail, deslizar el pie delantero: la tabla despega contigo. El truco fundacional, el que abre todas las puertas.',
+    'Tira del manillar, carga las piernas: las dos ruedas despegan contigo. El bunny hop, el truco fundacional que abre todas las puertas.',
   'tricks.2.level': 'El gran clásico',
   'tricks.2.text':
-    'Un ollie más un golpe que hace girar la tabla sobre su eje. La satisfacción cuando los pies caen justo encima no tiene igual.',
+    'Un bunny hop más un giro de 180°: la bici rota bajo tus pies. La satisfacción cuando las ruedas caen justo no tiene igual.',
   'tricks.3.level': 'La emoción del metal',
   'tricks.3.text':
-    'Deslizar el centro de la tabla por una barra o un bordillo. El sonido del slide es música.',
+    'Encaja los pegs en una barra o un bordillo y haz grind. El sonido del metal deslizando es música.',
   'tricks.4.level': 'El equilibrio puro',
   'tricks.4.text':
-    'Rodar sobre dos ruedas, en equilibrio, el mayor tiempo posible. Fácil de entender, toda una vida para dominar.',
+    'Rodar sobre la rueda trasera, en equilibrio, el mayor tiempo posible. El manual: fácil de entender, toda una vida para dominar.',
   'tricks.5.level': 'El rito de paso',
   'tricks.5.text':
-    'Los dos ejes apoyados en el borde, haces grind. Primer contacto real con el street, primeras chispas.',
+    'Una patada y el cuadro da una vuelta completa bajo tus pies: el tailwhip. Primera gran descarga, primeras chispas.',
 
   'marquee.1': 'para siempre',
   'marquee.2': 'ride or fall',
-  'marquee.3': 'push push push',
+  'marquee.3': 'pedal pedal pedal',
   'marquee.4': 'el suelo es nuestro',
-  'marquee.5': 'no comply',
+  'marquee.5': 'bar spin',
   'marquee.6': 'roll forever',
 
   'join.kicker': 'Rueda con nosotros',
