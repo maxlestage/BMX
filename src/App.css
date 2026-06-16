@@ -181,7 +181,7 @@ main {
   /* Panneau en verre 3D. */
   background:
     linear-gradient(165deg, rgba(255, 255, 255, 0.12) 0%, transparent 50%),
-    linear-gradient(180deg, rgba(237, 237, 236, 0.045), rgba(237, 237, 236, 0.015));
+    linear-gradient(180deg, rgba(196, 216, 238, 0.045), rgba(196, 216, 238, 0.015));
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-top-color: rgba(255, 255, 255, 0.22);
   box-shadow:
@@ -228,7 +228,7 @@ main {
   /* Carte en verre 3D : highlight diagonal + bordure haute claire + relief. */
   background:
     linear-gradient(165deg, rgba(255, 255, 255, 0.12) 0%, transparent 55%),
-    linear-gradient(180deg, rgba(237, 237, 236, 0.05), rgba(237, 237, 236, 0.02));
+    linear-gradient(180deg, rgba(196, 216, 238, 0.05), rgba(196, 216, 238, 0.02));
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-top-color: rgba(255, 255, 255, 0.22);
   border-radius: var(--radius);
@@ -250,7 +250,7 @@ main {
   border-top-color: rgba(230, 211, 167, 0.5);
   background:
     linear-gradient(165deg, rgba(255, 255, 255, 0.18) 0%, transparent 55%),
-    linear-gradient(180deg, rgba(230, 211, 167, 0.08), rgba(237, 237, 236, 0.02));
+    linear-gradient(180deg, rgba(230, 211, 167, 0.08), rgba(196, 216, 238, 0.02));
   box-shadow:
     0 20px 48px rgba(0, 0, 0, 0.4),
     0 0 40px rgba(230, 211, 167, 0.1),
@@ -315,7 +315,7 @@ main {
   transition: padding 0.25s ease, background 0.25s ease;
 }
 .trick:hover {
-  background: rgba(237, 237, 236, 0.03);
+  background: rgba(196, 216, 238, 0.03);
 }
 .trick__index {
   font-family: var(--display);
@@ -896,7 +896,7 @@ main {
   gap: 1rem;
   margin: 1.4rem 0;
   padding: 1.1rem 1.3rem;
-  background: linear-gradient(180deg, rgba(237, 237, 236, 0.05), rgba(237, 237, 236, 0.02));
+  background: linear-gradient(180deg, rgba(196, 216, 238, 0.05), rgba(196, 216, 238, 0.02));
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-top-color: rgba(255, 255, 255, 0.2);
   border-radius: var(--radius);
