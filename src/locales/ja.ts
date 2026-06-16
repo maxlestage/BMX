@@ -5,7 +5,7 @@ export const ja: Record<string, string> = {
   'nav.why': 'なぜ',
   'nav.tricks': 'トリック',
   'nav.crew': 'コミュニティ',
-  'nav.roll': '滑る',
+  'nav.roll': '走る',
   'nav.install': 'アプリをインストール',
   'nav.home': 'bmx・ホーム',
   'nav.menuOpen': 'メニューを開く',
@@ -13,11 +13,11 @@ export const ja: Record<string, string> = {
   'nav.primary': 'メインナビ',
 
   // Hero
-  'hero.title.l1': 'スケートは、',
+  'hero.title.l1': 'BMXは、',
   'hero.title.l2a': '',
   'hero.title.accent': '永遠に',
   'hero.lede':
-    '4つの車輪、1枚のボード、流れていくアスファルト。世界でいちばんシンプルな自由——滑る自由——へのラブレター。',
+    '2つの車輪、ハンドル、流れていくアスファルト。世界でいちばんシンプルな自由——走る自由——へのラブレター。',
   'hero.cta.manifesto': 'マニフェストを読む',
   'hero.cta.join': 'クルーに参加',
   'hero.scroll': 'スクロール',
@@ -27,22 +27,22 @@ export const ja: Record<string, string> = {
   // Manifesto
   'manifesto.kicker': 'マニフェスト',
   'manifesto.text':
-    '俺たちは1枚の板と4つの車輪に恋をした。それ以来、すべての歩道は約束、すべてのランプは問い、すべての転倒はまた始める理由になった。',
+    '俺たちはスチールフレームと2つの車輪に恋をした。それ以来、すべての歩道は約束、すべてのランプは問い、すべての転倒はまた跨がる理由になった。',
   'manifesto.sign':
-    'スケートは何も求めない。スコアも、対戦相手もいない。あるのは君と、ボードと、もう一度プッシュしたい気持ちだけ。',
+    'BMXは何も求めない。スコアも、対戦相手もいない。あるのは君と、バイクと、もう一度行きたい気持ちだけ。',
 
   // Reasons
   'reasons.kicker': '俺たちが愛する理由',
   'reasons.title': '4つの理由。1000の感覚。',
   'reasons.1.title': '自由',
   'reasons.1.text':
-    '時間割もなければ、予約したコートもない。世界中がスポットになる。ボードを置き、プッシュすれば、君は自由だ。',
+    '時間割もなければ、予約したコートもない。世界中がスポットになる。バイクに跨り、ペダルを漕げば、君は自由だ。',
   'reasons.2.title': 'コミュニティ',
   'reasons.2.text':
-    'スケートパークでは、どこから来たかなんて誰も聞かない。メイクと同じくらい挑戦に拍手を送る。クルー・ファースト。',
+    'パークでは、どこから来たかなんて誰も聞かない。メイクと同じくらい挑戦に拍手を送る。クルー・ファースト。',
   'reasons.3.title': '粘り強さ',
   'reasons.3.text':
-    '1つのトリックのために千の転倒。スケートは、つかむまで何度でも立ち上がることを教えてくれる。',
+    '1つのトリックのために千の転倒。BMXは、つかむまで何度でも立ち上がることを教えてくれる。',
   'reasons.4.title': '創造性',
   'reasons.4.text':
     'レッジ、階段、ベンチ。街を作り変えるのは君次第。すべてのラインがサインだ。',
@@ -51,42 +51,42 @@ export const ja: Record<string, string> = {
   'tricks.kicker': 'トリック帳',
   'tricks.title': '決して忘れないトリックたち。',
   'tricks.list': 'トリック一覧',
-  'tricks.1.level': '最初の恋',
+  'tricks.1.level': '最初のエア',
   'tricks.1.text':
-    'テールを弾き、前足をすり上げる。ボードは君と一緒に浮く。すべての扉を開く、原点のトリック。',
+    'ハンドルを引き、脚をためる。2つの車輪が君と一緒に浮く。これがバニーホップ、すべての扉を開く原点のトリック。',
   'tricks.2.level': '王道クラシック',
   'tricks.2.text':
-    'オーリーに、ボードを軸で回すフリックを加える。足がぴたりと乗った瞬間の満足感は他にない。',
+    'バニーホップに180°の回転を加える。バイクが足の下で回る。車輪がぴたりと収まる瞬間の満足感は他にない。',
   'tricks.3.level': '金属のスリル',
   'tricks.3.text':
-    'ボードの真ん中をレールやカーブで滑らせる。スライドの音は、音楽だ。',
+    'ペグをレールやカーブにかけてグラインド。金属が滑る音は、音楽だ。',
   'tricks.4.level': '純粋なバランス',
   'tricks.4.text':
-    '2つの車輪でバランスを取り、できるだけ長く転がる。理解は簡単、習得は一生。',
+    '後輪でバランスを取り、できるだけ長く転がる。これがマニュアル。理解は簡単、習得は一生。',
   'tricks.5.level': '通過儀礼',
   'tricks.5.text':
-    '2つのトラックを縁にかけてグラインド。ストリートとの最初の本当の接触、最初の火花。',
+    '一蹴りでフレームが足の下を一回転：テールウィップ。最初の大きなスリル、最初の火花。',
 
   // Marquee
   'marquee.1': '永遠に',
   'marquee.2': 'ride or fall',
-  'marquee.3': 'push push push',
+  'marquee.3': 'pedal pedal pedal',
   'marquee.4': '地面は俺たちのもの',
-  'marquee.5': 'no comply',
+  'marquee.5': 'bar spin',
   'marquee.6': 'roll forever',
 
   // Join
-  'join.kicker': '一緒に滑ろう',
+  'join.kicker': '一緒に走ろう',
   'join.title': 'クルーはスポットで待ってる。',
   'join.lede':
-    'セッション、新着、日曜の写真。メールを残してくれれば、滑るときに声をかける。',
+    'セッション、新着、日曜の写真。メールを残してくれれば、走るときに声をかける。',
   'join.thanks': '🚲 了解。アスファルトでまたすぐ会おう！',
   'join.placeholder': 'you@email.com',
   'join.emailAria': 'メールアドレス',
-  'join.submit': '滑りに行く',
+  'join.submit': '走りに行く',
 
   // Footer
-  'footer.tagline': 'riders company · スケートは永遠',
+  'footer.tagline': 'riders company · BMXは永遠',
   'footer.links': 'フッターのリンク',
   'footer.legalLine': '© {year} bmx · 愛と少しのグリップテープで作りました。',
 
@@ -94,19 +94,19 @@ export const ja: Record<string, string> = {
   'install.dialog': 'bmx をインストール',
   'install.title': 'bmx をインストール',
   'install.ios': '「共有」をタップして「ホーム画面に追加」を選んでね。',
-  'install.generic': 'アプリをホーム画面に追加すれば、オフラインでも滑れる。',
+  'install.generic': 'アプリをホーム画面に追加すれば、オフラインでも走れる。',
   'install.cta': 'インストール',
   'install.close': '閉じる',
 
   // Community — général
   'crew.kicker': 'コミュニティ',
-  'crew.title': 'クルーと一緒に滑ろう',
+  'crew.title': 'クルーと一緒に走ろう',
   'crew.sub':
-    'パートを投稿、スポットを地図に、投票に参加。みんなでスケート。',
+    'パートを投稿、スポットを地図に、投票に参加。みんなでBMX。',
   'crew.tabs': 'コミュニティのセクション',
   'crew.tab.parts': 'パート',
   'crew.tab.videos': '動画',
-  'crew.tab.riders': 'スケーター',
+  'crew.tab.riders': 'ライダー',
   'crew.tab.spots': 'スポット',
   'crew.tab.polls': '投票',
 
@@ -141,7 +141,7 @@ export const ja: Record<string, string> = {
 
   // Parts
   'parts.upload.title': 'パートを投稿 🎬',
-  'parts.upload.titlePlaceholder': 'タイトル（例：スケートパークのライン）',
+  'parts.upload.titlePlaceholder': 'タイトル（例：BMXパークのライン）',
   'parts.fx.label': '編集エフェクト',
   'parts.fx.grain': 'グレイン',
   'parts.fx.locked': 'bmx+ 限定',
@@ -188,15 +188,15 @@ export const ja: Record<string, string> = {
   'polls.voteGuest': '投票するにはログイン',
 
   // Riders
-  'riders.search': 'スケーターを検索…',
-  'riders.guest': 'ログインして世界最高のスケーターを選ぼう 🏆',
-  'riders.loading': 'スケーターを読み込み中…',
+  'riders.search': 'ライダーを検索…',
+  'riders.guest': 'ログインして世界最高のライダーを選ぼう 🏆',
+  'riders.loading': 'ライダーを読み込み中…',
   'riders.notRated': 'まだ評価なし',
   'riders.votes': '/10 · {n} 票',
   'riders.yourRating': 'あなたの評価：{n}',
   'riders.rate': '評価する',
   'riders.more': 'もっと見る（{n}）',
-  'riders.none': 'スケーターが見つかりません。',
+  'riders.none': 'ライダーが見つかりません。',
   'riders.loadError': '読み込めませんでした。',
   'riders.voteError': '投票できませんでした。',
 
@@ -227,7 +227,7 @@ export const ja: Record<string, string> = {
   'tab.home': 'ホーム',
   'tab.crew': 'クルー',
   'tab.videos': '動画',
-  'tab.riders': 'スケーター',
+  'tab.riders': 'ライダー',
   'tab.profile': 'プロフィール',
   'search.placeholder': '渋谷のレールとレッジ…',
   'search.results': '件',
@@ -276,7 +276,7 @@ export const ja: Record<string, string> = {
   'contact.press.title': 'プレス',
   'contact.press.text': '記者の方：取材、素材、アクセス。48時間以内に返信。',
   'contact.partners.title': '提携',
-  'contact.partners.text': 'スケートショップ、ブランド、イベント——一緒に滑ろう。',
+  'contact.partners.text': 'BMXショップ、ブランド、イベント——一緒に走ろう。',
   'contact.privacy.title': 'プライバシー',
   'contact.privacy.text': '個人データ、GDPR、アカウント削除。',
   'parts.upload.tooBig': '動画が大きすぎます（最大 175 MB）。',
