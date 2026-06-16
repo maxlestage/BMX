@@ -118,11 +118,16 @@ Chaque intégration est **optionnelle** : absente, elle se désactive proprement
 
 ## Déploiement
 
-- **Front → GitHub Pages** : `.github/workflows/deploy.yml` build la PWA avec Bun et
-  publie `dist/` à chaque push sur `main`. Chemins **relatifs** (marche à la racine
-  comme sous `/BMX/`). Activer *Settings → Pages → Source : GitHub Actions*.
-- **Back → Heroku** (conteneur) : `.github/workflows/deploy-backend.yml` (`heroku.yml`,
-  `Dockerfile`). Les migrations s'appliquent au démarrage.
+**Recommandé — une seule app Heroku (container)** : le backend Rust sert l'API
+**et** le front Vue (même origine, pas de CORS). Le `Dockerfile` racine build le
+front (Vite) puis le backend (release) et sert `dist/` via `STATIC_DIR`.
+
+```bash
+./deploy.sh <nom-app-heroku>     # stack container + Postgres + JWT_SECRET + push
+# options : BRANCH, PG_PLAN, JWT_SECRET, ADMIN_EMAIL/ADMIN_PASS
+```
+
+Autres cibles (optionnel) :
 - **CI** : `.github/workflows/ci.yml` lance `typecheck` + `build` sur chaque PR.
 
 ## Icônes
