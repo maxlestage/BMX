@@ -1,0 +1,30 @@
+# Render Blueprint — déploie bmx (front Vue + API Rust dans une seule image)
+# à partir du Dockerfile, directement depuis GitHub via le Dashboard Render.
+# AUCUNE CLI nécessaire (compatible mobile) : Render → New → Blueprint →
+# choisir le repo → Apply. Render build le Dockerfile, provisionne Postgres,
+# injecte les variables, et expose une URL HTTPS.
+services:
+  - type: web
+    name: bmx
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /api/v1/healthz
+    autoDeploy: true
+    envVars:
+      # Secret d'auth généré automatiquement par Render.
+      - key: JWT_SECRET
+        generateValue: true
+      - key: RUST_LOG
+        value: info,api=info,sqlx=warn
+      # Connexion Postgres fournie par la base ci-dessous (sslmode géré côté app).
+      - key: DATABASE_URL
+        fromDatabase:
+          name: bmx-db
+          property: connectionString
+
+databases:
+  - name: bmx-db
+    plan: free
+    databaseName: bmx
+    user: bmx
