@@ -22,7 +22,10 @@ RUN npx vite build
 FROM rust:1-bookworm AS backend
 WORKDIR /app
 COPY backend/ ./
-RUN cargo build --release -p api
+# On retire rust-toolchain.toml pour utiliser le toolchain stable DÉJÀ présent
+# dans l'image (sinon rustup re-télécharge tout le canal « stable » à chaque
+# build : étape réseau lente et susceptible d'échouer). Build vérifié ainsi.
+RUN rm -f rust-toolchain.toml && cargo build --release -p api
 
 # ---------- 3) Runtime ----------
 FROM debian:bookworm-slim
