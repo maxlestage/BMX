@@ -16,3 +16,6 @@ ios/build/
 *.db
 *.db-shm
 *.db-wal
+
+# Rust (résidu si build lancé depuis la racine)
+/target/
