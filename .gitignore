@@ -16,6 +16,3 @@ ios/build/
 *.db
 *.db-shm
 *.db-wal
-
-# Rust (workspace à la racine)
-/target/

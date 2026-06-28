@@ -1,9 +1,6 @@
-# Workspace Rust à la racine du repo : nécessaire pour que le buildpack Rust
-# de Heroku (déploiement GitHub, sans CLI, compatible mobile) détecte et compile
-# le backend. Les crates vivent dans backend/.
 [workspace]
 resolver = "2"
-members = ["backend/api", "backend/entity", "backend/migration"]
+members = ["api", "entity", "migration"]
 
 [workspace.package]
 version = "0.1.0"
