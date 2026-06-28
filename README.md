@@ -78,10 +78,10 @@ bun install        # ou npm install
 bun run dev        # → Vite (http://localhost:5173)
 ```
 
-**Back** (SQLite par défaut, migrations appliquées au démarrage). Le workspace
-Rust est à la racine (`Cargo.toml`), les crates dans `backend/`.
+**Back** (SQLite par défaut, migrations appliquées au démarrage)
 ```bash
-cargo run -p api          # → http://localhost:8080/api/v1
+cd backend
+cargo run          # → http://localhost:8080/api/v1
 ```
 
 **iOS** (Xcode 16+, voir [`ios/README.md`](./ios/README.md))
@@ -99,7 +99,7 @@ bun run build      # vue-tsc + vite build → dist/ (assets fingerprintés + PWA
 bun run preview    # sert dist/ (vite preview)
 bun run typecheck  # vue-tsc --noEmit (strict)
 
-cargo build --release -p api      # backend (workspace à la racine)
+cd backend && cargo build --release && cargo test
 ```
 
 Le service worker n'est actif qu'en production (jamais sur `localhost`) pour éviter
@@ -114,21 +114,18 @@ les caches rances pendant le développement.
 `VAPID_PRIVATE_KEY` · `VAPID_SUBJECT` (push), `REVENUECAT_WEBHOOK_AUTH`.
 Chaque intégration est **optionnelle** : absente, elle se désactive proprement.
 
-> Générer une paire de clés VAPID : `cargo run -p api --example genvapid`
+> Générer une paire de clés VAPID : `cargo run --example genvapid --manifest-path backend/Cargo.toml`
 
 ## Déploiement
 
-Le backend Rust sert l'**API et le front Vue** (même origine, pas de CORS). Trois voies :
+**Recommandé — une seule app Heroku (container)** : le backend Rust sert l'API
+**et** le front Vue (même origine, pas de CORS). Le `Dockerfile` racine build le
+front (Vite) puis le backend (release) et sert `dist/` via `STATIC_DIR`.
 
-**A. Heroku depuis le Dashboard / mobile (buildpacks, sans CLI)** — multi-buildpack
-`heroku/nodejs` (build le front → `dist/`) + buildpack Rust (compile `target/release/api`).
-Le `Procfile` lance le binaire qui sert `dist/` (`STATIC_DIR=dist`). Config via `app.json`
-(bouton « Deploy to Heroku ») ou via *Settings → Buildpacks* + *Resources* (Postgres) +
-*Config Vars* (`JWT_SECRET`, `STATIC_DIR=dist`).
-
-**B. Container (Render, ou Heroku container en CLI)** — le `Dockerfile` racine build le
-front puis le backend et sert `dist/`. Render : *New → Blueprint* (`render.yaml`).
-Heroku : `./deploy.sh <app>` (stack container + Postgres + `JWT_SECRET` + push).
+```bash
+./deploy.sh <nom-app-heroku>     # stack container + Postgres + JWT_SECRET + push
+# options : BRANCH, PG_PLAN, JWT_SECRET, ADMIN_EMAIL/ADMIN_PASS
+```
 
 Autres cibles (optionnel) :
 - **CI** : `.github/workflows/ci.yml` lance `typecheck` + `build` sur chaque PR.

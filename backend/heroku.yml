@@ -1,0 +1,9 @@
+# Déploiement Heroku par conteneur, sans Docker local.
+# S'utilise en poussant le sous-dossier backend/ comme racine :
+#   git subtree push --prefix backend heroku main
+# (l'app doit être en stack container : heroku stack:set container -a <app>)
+build:
+  docker:
+    web: Dockerfile
+run:
+  web: api
