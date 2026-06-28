@@ -1,0 +1,16 @@
+# Réduit la taille du slug Heroku (limite 500 Mo) après compilation par les
+# buildpacks : on ne garde que le binaire (target/release/api) et le front
+# buildé (dist/). Sources et artefacts intermédiaires retirés du slug.
+node_modules
+src
+public
+ios
+.github
+scripts
+backend
+target/debug
+target/release/deps
+target/release/build
+target/release/incremental
+target/release/.fingerprint
+target/release/examples
